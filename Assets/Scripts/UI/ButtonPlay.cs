@@ -10,7 +10,6 @@ public class ButtonPlay : MonoBehaviour
     private void OnMouseUpAsButton()
     {
         audioPlay.play();
-        buttonMusic.Save();
         SceneManager.LoadScene(1);
 
     }

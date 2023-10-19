@@ -1,13 +1,17 @@
-using System.Collections;
+using Scripts.Logica;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+
 
 public class Win : MonoBehaviour
-{
-    [SerializeField] private int _nextLevel;
+{  
     [SerializeField] private AudioClip audioClip;
     [SerializeField] private AudioSource audioSource;
-    [SerializeField] private Move move;
+    [SerializeField] private Move _move;
+
+    [SerializeField] private GameObject _windowsWin;
+    [SerializeField] private GameObject _screenMain;
+    [SerializeField] private GameObject _screenSetting;
+    [SerializeField] private GameObject[] _particl;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -16,18 +20,22 @@ public class Win : MonoBehaviour
             if (collision.GetComponent<PlayerController>() != null)
             {
                 audioSource.PlayOneShot(audioClip);
-                move.Speed= 0;
-                StartCoroutine("Delay");
+                _move.enabled = false;
+                _windowsWin.SetActive(true);
+                _screenMain.SetActive(false);
+                _screenSetting.SetActive(false);
+
+                for (int i = 0; i < _particl.Length; i++)
+                {
+                    _particl[i].SetActive(false);
+                }
+                
+               
             }
         }
     }
 
-    IEnumerator Delay()
-    {
-        yield return new WaitForSeconds(2.2f);
-        SceneManager.LoadScene(_nextLevel);
-
-    }
+   
 
 
 }

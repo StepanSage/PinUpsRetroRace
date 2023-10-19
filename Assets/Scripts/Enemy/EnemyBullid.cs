@@ -7,6 +7,6 @@ public class EnemyBullid : EnemyCutter
 {
     public override void Move()
     {
-        transform.DOMove(_endPosition, _speed).SetEase(Ease.Linear);
+        transform.DOMove(_endPosition.position, _speed).SetEase(Ease.Linear);
     }
 }

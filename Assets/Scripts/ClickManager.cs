@@ -1,5 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
+using Scripts.Logica;
+
 using UnityEngine;
 
 public class ClickManager : MonoBehaviour

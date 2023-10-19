@@ -5,21 +5,24 @@ using UnityEngine;
 
 public class Trining : MonoBehaviour
 {
-    public string[] _monolog = new string[4];
+    public string[] _monolog = new string[5];
+
+    private int count;
+
     [SerializeField] private GameObject _trining;
     [SerializeField] private TMP_Text _text;
     [SerializeField] private GameObject _ScreenMain;
-    private int count;
+    [SerializeField] private GameObject[] _particl;
 
 
     private void Awake()
     {
-       
-        _monolog[0] = "To move the car, hold down the key on the screen";
-        _monolog[1] = "If we don't have any cars left, we will lose!!!";
-        _monolog[2] = "There is an obstacle on the way that should be avoided.";
-        _monolog[3] = "as soon as we get to the finish line we will win";
         Time.timeScale = 0f;
+        _monolog[0] = "Для прежвижения нажмите левую кнопкой мышки.";
+        _monolog[1] = "Если у нас не останется ни одной сферы, мы проиграем!!!";
+        _monolog[2] = "На пути есть препятствие, которого следует избегать.";
+        _monolog[3] = "Как только мы доберемся до портала, мы победим";
+        _monolog[4] = "Удачи!!!!";
     }
 
     private void Update()
@@ -43,7 +46,15 @@ public class Trining : MonoBehaviour
         }
         else if (count== 4)
         {
+            _text.text = _monolog[4];
+        }
+        else if(count == 5)
+        {
             _ScreenMain.gameObject.SetActive(true);
+            for (int i = 0; i < _particl.Length; i++)
+            {
+                _particl[i].SetActive(true);
+            }
             Time.timeScale = 1f;
             Destroy(_trining);
         }

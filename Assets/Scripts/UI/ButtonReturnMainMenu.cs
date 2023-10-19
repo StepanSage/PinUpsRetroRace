@@ -1,17 +1,33 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class ButtonReturnMainMenu : MonoBehaviour
 {
-    [SerializeField] private AudioPlay audioPlay;
-    [SerializeField] private ButtonMusic buttonMusic;
+    private const int IDLodingeScense = 0;
+
+    [Header("DelayForSound"), Space]
+    private float _delayForSound = 0.3f;
+
+    [SerializeField] private AudioPlay _audioPlay;
+
+    private void Awake()
+    {
+        if (_audioPlay == null)
+            _audioPlay = FindObjectOfType<AudioPlay>();
+    }
 
     private void OnMouseUpAsButton()
     {
-        audioPlay.play();
-        buttonMusic.Save();
-        SceneManager.LoadScene(0);
+        _audioPlay.play();
+        StartCoroutine("Delay");
     }
 
-    
+    private IEnumerator Delay()
+    {
+        yield return new WaitForSeconds(_delayForSound);
+        SceneManager.LoadScene(IDLodingeScense);
+    }
+
+
 }

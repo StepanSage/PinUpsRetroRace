@@ -16,7 +16,7 @@ public class ButtonGameMenu : MonoBehaviour
         _MainScreen.SetActive(false);
         _MainScreen.SetActive(false);
         _Gamemenu.SetActive(true);
-        Time.timeScale= 0f;
+       
 
         for (int i = 0; i < _partica.Length; i++)
         {

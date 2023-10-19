@@ -10,15 +10,25 @@ public class LoseController : MonoBehaviour
     [SerializeField] private int _currentSence;
     [SerializeField] private AudioClip audioClip;
     [SerializeField] private AudioSource audioSource;
+
+    [SerializeField] private GameObject _restatMenu;
+    [SerializeField] private GameObject _mainScreen;
+    [SerializeField] private GameObject _settingScreen;
+
+    [SerializeField] private GameObject[] _particl;
     
 
     private void Update()
     {
         if(CountCar == lose)
         {
-
-            SceneManager.LoadScene(_currentSence);
-           
+            _mainScreen.SetActive(false);
+            _settingScreen.SetActive(false);
+            _restatMenu.SetActive(true);
+            for (int i = 0; i < _particl.Length; i++)
+            {
+                _particl[i].SetActive(false);
+            }
         }
     }
 
@@ -26,6 +36,7 @@ public class LoseController : MonoBehaviour
     {
         lose++;
         audioSource.PlayOneShot(audioClip);
+
     }
     
 }
