@@ -5089,6 +5089,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de3ad35636839614aa9ab08f51d052e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _timeScale: 0
   _endPosition: {fileID: 0}
   _speed: 0
   loseController: {fileID: 404059451}
@@ -5096,6 +5097,63 @@ MonoBehaviour:
   isRotetion: 0
   currentTime: 1
   startTime: 0
+--- !u!1001 &37539198
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2211564899198745197, guid: caf9732433f4dc044845763962493607, type: 3}
+      propertyPath: m_Name
+      value: YandexGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 2211564899198745199, guid: caf9732433f4dc044845763962493607, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2211564899198745199, guid: caf9732433f4dc044845763962493607, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2211564899198745199, guid: caf9732433f4dc044845763962493607, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2211564899198745199, guid: caf9732433f4dc044845763962493607, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2211564899198745199, guid: caf9732433f4dc044845763962493607, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2211564899198745199, guid: caf9732433f4dc044845763962493607, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2211564899198745199, guid: caf9732433f4dc044845763962493607, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2211564899198745199, guid: caf9732433f4dc044845763962493607, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2211564899198745199, guid: caf9732433f4dc044845763962493607, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2211564899198745199, guid: caf9732433f4dc044845763962493607, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: caf9732433f4dc044845763962493607, type: 3}
 --- !u!1 &125806737 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2866268127204236923, guid: 5dd946685b334a2498b231619d6b6b7a, type: 3}
@@ -5491,6 +5549,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5abcd2578a266614e8791180ca3720be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _timeScale: 0
   _endPosition: {fileID: 149920003}
   _speed: 15
   loseController: {fileID: 404059451}
@@ -12227,6 +12286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ce37b690a2551946a1e9cacb4194857, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _timeScale: 0
   _endPosition: {fileID: 0}
   _speed: 5
   loseController: {fileID: 404059451}
@@ -12616,6 +12676,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de3ad35636839614aa9ab08f51d052e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _timeScale: 0
   _endPosition: {fileID: 0}
   _speed: 4
   loseController: {fileID: 404059451}
@@ -13186,6 +13247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ce37b690a2551946a1e9cacb4194857, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _timeScale: 0
   _endPosition: {fileID: 0}
   _speed: 5
   loseController: {fileID: 404059451}
@@ -13444,6 +13506,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5abcd2578a266614e8791180ca3720be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _timeScale: 0
   _endPosition: {fileID: 1125524596}
   _speed: 15
   loseController: {fileID: 404059451}
@@ -13620,3 +13683,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 221515778}
+  - {fileID: 37539198}

@@ -8,6 +8,9 @@ public class EnemyCutter : MonoBehaviour
 {
     private bool IsAction;
     private GameObject _palaer;
+    private float temp;
+    private Tween enemyTween;
+    [SerializeField] private float _timeScale;
 
     [SerializeField] protected Transform _endPosition;
     [SerializeField] protected float _speed;
@@ -22,8 +25,11 @@ public class EnemyCutter : MonoBehaviour
     {
         currentTime = 0.2f;
         startTime = currentTime;
-        
+
+
+
         Move();
+      
         Rotetion();
         
     }
@@ -31,16 +37,24 @@ public class EnemyCutter : MonoBehaviour
     {
         Delay();
     }
+       
 
     public virtual void Move()
     {
-        transform.DOMove(_endPosition.position, _speed).SetEase(Ease.Linear).SetLoops(-1, LoopType.Yoyo);
+        enemyTween = transform.DOMove(_endPosition.position, _speed)
+             .SetEase(Ease.Linear)
+             .SetLoops(-1, LoopType.Yoyo);
+    }
 
-
+    public void  DontMove(Transform transform)
+    {
+        transform.DOMove(transform.position, _speed).SetEase(Ease.Linear).SetLoops(-1, LoopType.Yoyo);
     }
 
     public void Rotetion()
     {
+      
+    
         if(isRotetion) 
         transform.DORotate(_Rotetion, _speed, RotateMode.FastBeyond360).SetEase(Ease.Linear).SetLoops(-1, LoopType.Restart);
     }

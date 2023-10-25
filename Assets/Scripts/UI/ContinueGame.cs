@@ -16,7 +16,7 @@ public class ContinueGame : MonoBehaviour
         _MainScreen.SetActive(true);
         _MainScreen.SetActive(true);
         _Gamemenu.SetActive(false);
-        Time.timeScale = 1.0f;
+       Time.timeScale = 1f;
 
         for (int i = 0; i < _partocl.Length; i++)
         {
